@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #4d4b4b;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .slide {
+  height: 200px;
+  width: 50px;
+  background-color: orange;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.container .slide:first-child {
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+}
+
+.container .slide .aa {
+  position: absolute;
+  content: "";
+  background-color: #4d4b4b;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.container .spin {
+  -webkit-transform: skewX(25.4deg);
+          transform: skewX(25.4deg);
+  background-color: red;
+}
+/*# sourceMappingURL=style.css.map */

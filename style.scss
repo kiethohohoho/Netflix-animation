@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(77, 75, 75);
+}
+
+.container {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+
+  .slide {
+    height: 200px;
+    width: 50px;
+    background-color: orange;
+    transition: 0.5s ease;
+    z-index: 2;
+    position: relative;
+
+    &:first-child {
+      transform: translateX(3px);
+    }
+
+    .aa {
+      position: absolute;
+      content: "";
+      background-color: rgb(77, 75, 75);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: all 1s ease;
+    }
+  }
+
+  .spin {
+    transform: skewX(25.4deg);
+    background-color: red;
+  }
+}
