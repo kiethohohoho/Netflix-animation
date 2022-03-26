@@ -8,8 +8,8 @@ setTimeout(() => {
 
 setTimeout(() => {
   slide2.style.transform = "translateY(100%)";
-}, 2000);
+}, 1600);
 
 setTimeout(() => {
   slide3.style.transform = "translateY(-100%)";
-}, 3000);
+}, 2200);
