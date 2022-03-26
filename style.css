@@ -15,38 +15,64 @@ html {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background-color: #4d4b4b;
+  background-color: black;
+  overflow: hidden;
 }
 
 .container {
+  margin: 20px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 500px;
 }
 
-.container .slide {
-  height: 200px;
-  width: 50px;
-  background-color: orange;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  z-index: 2;
+.container .N {
   position: relative;
+  width: 360px;
+  height: 520px;
 }
 
-.container .slide:first-child {
-  -webkit-transform: translateX(3px);
-          transform: translateX(3px);
+.container .N::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 10;
+  width: 120%;
+  height: 30px;
+  background: black;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
 }
 
-.container .slide .aa {
+.container .N .slide {
+  position: absolute;
+  width: 120px;
+  height: 100%;
+  background: #b00612;
+}
+
+.container .N .slide:last-child {
+  right: 0;
+}
+
+.container .N .slide .aa {
   position: absolute;
   content: "";
-  background-color: #4d4b4b;
+  background-color: black;
   height: 100%;
   width: 100%;
   top: 0;
@@ -56,9 +82,63 @@ html {
   transition: all 1s ease;
 }
 
-.container .spin {
+.container .N .spin {
+  background: #e50815;
+  left: 0;
+  z-index: 2;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
   -webkit-transform: skewX(25.4deg);
           transform: skewX(25.4deg);
-  background-color: red;
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+}
+
+.container .netflix {
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  -webkit-animation: netflixx 3s linear;
+          animation: netflixx 3s linear;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+@-webkit-keyframes netflixx {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes netflixx {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,41 +9,91 @@ html {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(77, 75, 75);
+  background-color: black;
+  overflow: hidden;
 }
 
 .container {
+  margin: 20px auto;
   display: flex;
-  overflow: hidden;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 500px;
 
-  .slide {
-    height: 200px;
-    width: 50px;
-    background-color: orange;
-    transition: 0.5s ease;
-    z-index: 2;
+  .N {
     position: relative;
+    width: 360px;
+    height: 520px;
 
-    &:first-child {
-      transform: translateX(3px);
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      z-index: 10;
+      width: 120%;
+      height: 30px;
+      background: black;
+      border-top-left-radius: 50% 100%;
+      border-top-right-radius: 50% 100%;
     }
 
-    .aa {
+    .slide {
       position: absolute;
-      content: "";
-      background-color: rgb(77, 75, 75);
+      width: 120px;
       height: 100%;
-      width: 100%;
-      top: 0;
+      background: #b00612;
+
+      &:last-child {
+        right: 0;
+      }
+
+      .aa {
+        position: absolute;
+        content: "";
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: all 1s ease;
+      }
+    }
+
+    .spin {
+      background: #e50815;
       left: 0;
-      z-index: 1;
-      transition: all 1s ease;
+      z-index: 2;
+      transform-origin: top left;
+      transform: skewX(25.4deg);
+      box-shadow: 0 0 20px black;
     }
   }
-
-  .spin {
-    transform: skewX(25.4deg);
-    background-color: red;
+  .netflix {
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    animation: netflixx 3s linear;
+    color: white;
+    font-family: "Arial", sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    z-index: 2;
+  }
+  @keyframes netflixx {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    80% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
