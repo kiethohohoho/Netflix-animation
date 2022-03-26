@@ -75,7 +75,7 @@ html {
   .netflix {
     text-transform: uppercase;
     letter-spacing: 15px;
-    animation: netflixx 3s linear;
+    animation: netflixx 2.5s linear;
     color: white;
     font-family: "Arial", sans-serif;
     font-size: 45px;
@@ -87,7 +87,7 @@ html {
       opacity: 0;
       transform: scale(0.8);
     }
-    80% {
+    60% {
       opacity: 0;
       transform: scale(0.8);
     }
